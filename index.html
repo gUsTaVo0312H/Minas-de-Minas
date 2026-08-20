@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Minas das Minas — Exposição itinerante SENAI sobre mineração e a história de Minas Gerais. Acompanhe a agenda e agende sua escola." />
+  <title>Minas das Minas | SENAI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="#inicio" class="site-header__logo" aria-label="Minas das Minas — Início">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="16" cy="16" r="15" fill="#557571"/>
+          <path d="M8 22L16 10L24 22H8Z" fill="rgba(255,255,255,0.9)"/>
+          <circle cx="16" cy="14" r="3" fill="#C4C09A"/>
+        </svg>
+        <span class="site-header__logo-text">Minas das Minas</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#exposicao">Exposição</a></li>
+          <li><a class="site-nav__link" href="#agenda">Agenda</a></li>
+          <li><a class="site-nav__link" href="#cidades">Cidades</a></li>
+          <li><a class="site-nav__link" href="#galeria">Galeria</a></li>
+          <li><a class="site-nav__link" href="#curiosidades">Curiosidades</a></li>
+          <li><a class="site-nav__link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile nav panel -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação mobile">
+    <button class="mobile-nav__close btn" aria-label="Fechar menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <path d="M18 6L6 18M6 6l12 12" stroke="#557571" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="#exposicao">Exposição</a></li>
+      <li><a class="mobile-nav__link" href="#agenda">Agenda</a></li>
+      <li><a class="mobile-nav__link" href="#cidades">Cidades</a></li>
+      <li><a class="mobile-nav__link" href="#galeria">Galeria</a></li>
+      <li><a class="mobile-nav__link" href="#curiosidades">Curiosidades</a></li>
+      <li><a class="mobile-nav__link" href="#contato">Contato</a></li>
+    </ul>
+    <p class="mobile-nav__footer">SENAI Minas Gerais</p>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section id="inicio" class="hero" aria-label="Apresentação da exposição">
+      <img
+        class="hero__bg-image"
+        src="https://images.unsplash.com/photo-1695169152266-d9ac86fab9c5?w=1920&h=1080&fit=crop&auto=format"
+        alt="Vista aérea de mineração em Minas Gerais"
+      />
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow">SENAI apresenta</p>
+        <h1 class="hero__title">Minas das Minas</h1>
+        <p class="hero__subtitle">
+          Uma exposição itinerante sobre mineração e a história de Minas Gerais,
+          direto na sua cidade.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#agenda">Acompanhe a Rota</a>
+          <a class="btn btn--outline" href="#contato">Agende sua Escola</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M6 9l6 6 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPOSIÇÃO — floor plan
+         ============================================================ -->
+    <section id="exposicao" class="exposicao reveal-section" aria-labelledby="exposicao-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="exposicao-heading" class="section-header__title">Exposição na Carreta</h2>
+          <p class="section-header__body">
+            Explore a planta baixa da carreta itinerante e descubra o que aguarda em cada área da exposição.
+            Toque nos círculos para ver detalhes de cada zona.
+          </p>
+        </header>
+
+        <div class="floor-plan">
+          <div class="floor-plan__container">
+            <!-- SVG Floor Plan -->
+            <svg
+              class="floor-plan__svg"
+              viewBox="0 0 800 240"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Planta baixa da carreta de exposição com 5 zonas marcadas"
+            >
+              <!-- Trailer body -->
+              <rect x="20" y="30" width="760" height="180" rx="12" ry="12" fill="#C4C09A" stroke="#557571" stroke-width="2.5"/>
+
+              <!-- Zone dividers -->
+              <line x1="170" y1="30" x2="170" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <line x1="330" y1="30" x2="330" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <line x1="490" y1="30" x2="490" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <line x1="650" y1="30" x2="650" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+              <!-- Zone fills -->
+              <rect x="21" y="31" width="148" height="178" rx="10" fill="rgba(85,117,113,0.08)"/>
+              <rect x="491" y="31" width="158" height="178" fill="rgba(85,117,113,0.08)"/>
+
+              <!-- Zone labels -->
+              <text x="95"  y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Entrada</text>
+              <text x="250" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Minerais</text>
+              <text x="410" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Interativo</text>
+              <text x="570" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Linha do Tempo</text>
+              <text x="725" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Audiovisual</text>
+
+              <!-- Windows top -->
+              <rect x="185" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
+              <rect x="345" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
+              <rect x="505" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
+              <rect x="665" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
+
+              <!-- Wheels -->
+              <ellipse cx="160" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
+              <ellipse cx="230" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
+              <ellipse cx="570" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
+              <ellipse cx="640" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
+
+              <!-- Hitch -->
+              <rect x="770" y="108" width="18" height="24" rx="4" fill="#557571" opacity="0.6"/>
+
+              <!-- SENAI badge -->
+              <rect x="36" y="50" width="108" height="30" rx="6" fill="#557571"/>
+              <text x="90" y="70" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="13" fill="white">SENAI MG</text>
+            </svg>
+
+            <!-- Hotspot buttons — positions defined in CSS via .hotspot--N classes -->
+            <button class="hotspot hotspot--1" data-hotspot="1" aria-label="Zona 1: Entrada e Recepção" aria-expanded="false">+</button>
+            <button class="hotspot hotspot--2" data-hotspot="2" aria-label="Zona 2: Sala de Minerais" aria-expanded="false">+</button>
+            <button class="hotspot hotspot--3" data-hotspot="3" aria-label="Zona 3: Ambiente Interativo" aria-expanded="false">+</button>
+            <button class="hotspot hotspot--4" data-hotspot="4" aria-label="Zona 4: Linha do Tempo" aria-expanded="false">+</button>
+            <button class="hotspot hotspot--5" data-hotspot="5" aria-label="Zona 5: Área Audiovisual" aria-expanded="false">+</button>
+
+            <!-- Shared tooltip — positioned dynamically by JS -->
+            <div id="hotspot-tooltip" class="hotspot__tooltip" role="tooltip" hidden>
+              <button class="hotspot__tooltip-close" aria-label="Fechar informação">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M18 6L6 18M6 6l12 12" stroke="#557571" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </button>
+              <strong class="hotspot__tooltip-title"></strong>
+              <p class="hotspot__tooltip-desc"></p>
+            </div>
+          </div>
+          <p class="floor-plan__hint">Toque nos pontos (+) para saber mais sobre cada área.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         AGENDA — schedule
+         ============================================================ -->
+    <section id="agenda" class="agenda reveal-section" aria-labelledby="agenda-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="agenda-heading" class="section-header__title">Agenda de Visitação</h2>
+          <p class="section-header__body">
+            Acompanhe o roteiro completo da carreta por Minas Gerais. A exposição é gratuita e aberta à comunidade.
+          </p>
+        </header>
+
+        <ul class="agenda__list" aria-label="Lista de datas e locais da exposição">
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-09-08">08 – 14 Set 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">SENAI Contagem — Av. João César de Oliveira, 3500</span>
+              <span class="agenda__city-tag">Contagem</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-09-15">15 – 21 Set 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">Praça da Liberdade — Belo Horizonte</span>
+              <span class="agenda__city-tag">Belo Horizonte</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-09-22">22 – 28 Set 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">SENAI Ouro Preto — Rua Padre Rolim, 765</span>
+              <span class="agenda__city-tag">Ouro Preto</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-10-06">06 – 12 Out 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">Praça Gomes Freire — Mariana</span>
+              <span class="agenda__city-tag">Mariana</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-10-13">13 – 19 Out 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">SENAI Itabira — Rua Coronel Belmiro, 240</span>
+              <span class="agenda__city-tag">Itabira</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-10-20">20 – 26 Out 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">Centro Cultural de Diamantina — Praça Conselheiro Mata</span>
+              <span class="agenda__city-tag">Diamantina</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-10-27">27 Out – 02 Nov 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">SENAI Montes Claros — Av. Cula Mangabeira, 170</span>
+              <span class="agenda__city-tag">Montes Claros</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-11-03">03 – 09 Nov 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">Praça Rui Barbosa — Uberlândia</span>
+              <span class="agenda__city-tag">Uberlândia</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-11-10">10 – 16 Nov 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">SENAI Uberaba — Av. Dom Luis Maria de Santana, 396</span>
+              <span class="agenda__city-tag">Uberaba</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-11-17">17 – 23 Nov 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">Parque Municipal de Juiz de Fora</span>
+              <span class="agenda__city-tag">Juiz de Fora</span>
+            </div>
+          </li>
+
+          <li class="agenda__item">
+            <div class="agenda__date-group">
+              <time class="agenda__date" datetime="2025-11-24">24 – 30 Nov 2025</time>
+              <span class="agenda__time">Seg–Sex: 8h–17h · Sáb: 8h–12h</span>
+            </div>
+            <div class="agenda__location">
+              <span class="agenda__place">SENAI Governador Valadares — Av. Minas Gerais, 1000</span>
+              <span class="agenda__city-tag">Gov. Valadares</span>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CIDADES — city search + accordion
+         ============================================================ -->
+    <section id="cidades" class="cidades reveal-section" aria-labelledby="cidades-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="cidades-heading" class="section-header__title">Cidades Visitadas</h2>
+          <p class="section-header__body">
+            Encontre informações detalhadas sobre a visita na sua cidade.
+          </p>
+        </header>
+
+        <!-- Search -->
+        <div class="city-search">
+          <label for="city-search" class="visually-hidden">Buscar cidade</label>
+          <svg class="city-search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="8" stroke="#557571" stroke-width="2"/>
+            <path d="M21 21l-4.35-4.35" stroke="#557571" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input
+            id="city-search"
+            class="city-search__input"
+            type="search"
+            placeholder="Buscar cidade..."
+            autocomplete="off"
+            aria-controls="cities-accordion"
+          />
+        </div>
+
+        <!-- Empty state -->
+        <div id="cities-empty" class="empty-state" hidden aria-live="polite">
+          <svg class="empty-state__icon" width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="8" stroke="#557571" stroke-width="1.5" opacity="0.4"/>
+            <path d="M21 21l-4.35-4.35" stroke="#557571" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+            <path d="M8 8l6 6M14 8l-6 6" stroke="#557571" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+          </svg>
+          <h3 class="empty-state__title">Nenhuma cidade encontrada</h3>
+          <p class="empty-state__body">Tente outro nome ou verifique a agenda completa acima.</p>
+        </div>
+
+        <!-- Accordion -->
+        <ul id="cities-accordion" class="accordion" aria-label="Cidades da exposição">
+
+          <li class="accordion__item" data-city="Belo Horizonte">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-bh">
+              <span class="accordion__city-name">Belo Horizonte</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-bh" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>15 a 21 de setembro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>Praça da Liberdade, Centro — Belo Horizonte, MG</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/Pra%C3%A7a+da+Liberdade+Belo+Horizonte" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Contagem">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-contagem">
+              <span class="accordion__city-name">Contagem</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-contagem" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>08 a 14 de setembro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>SENAI Contagem — Av. João César de Oliveira, 3500</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/SENAI+Contagem+Av+Jo%C3%A3o+C%C3%A9sar+de+Oliveira+3500" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Ouro Preto">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-op">
+              <span class="accordion__city-name">Ouro Preto</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-op" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>22 a 28 de setembro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>SENAI Ouro Preto — Rua Padre Rolim, 765</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/SENAI+Ouro+Preto+Rua+Padre+Rolim+765" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Mariana">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-mariana">
+              <span class="accordion__city-name">Mariana</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-mariana" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>06 a 12 de outubro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>Praça Gomes Freire — Mariana, MG</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/Pra%C3%A7a+Gomes+Freire+Mariana+MG" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Diamantina">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-diamantina">
+              <span class="accordion__city-name">Diamantina</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-diamantina" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>20 a 26 de outubro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>Centro Cultural — Praça Conselheiro Mata, Diamantina, MG</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/Pra%C3%A7a+Conselheiro+Mata+Diamantina+MG" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Montes Claros">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-mc">
+              <span class="accordion__city-name">Montes Claros</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-mc" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>27 out a 02 nov 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>SENAI Montes Claros — Av. Cula Mangabeira, 170</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/SENAI+Montes+Claros+Av+Cula+Mangabeira+170" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Uberlândia">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-udi">
+              <span class="accordion__city-name">Uberlândia</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-udi" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>03 a 09 de novembro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>Praça Rui Barbosa — Uberlândia, MG</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/Pra%C3%A7a+Rui+Barbosa+Uberl%C3%A2ndia+MG" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+          <li class="accordion__item" data-city="Juiz de Fora">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="city-jf">
+              <span class="accordion__city-name">Juiz de Fora</span>
+              <svg class="accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M6 9l6 6 6-6" stroke="#557571" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="city-jf" class="accordion__panel">
+              <ul class="accordion__details">
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="#557571" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>17 a 23 de novembro de 2025 · Seg–Sex 8h–17h, Sáb 8h–12h</span>
+                </li>
+                <li class="accordion__detail-row">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+                  <span>Parque Municipal Halfeld — Juiz de Fora, MG</span>
+                </li>
+              </ul>
+              <a class="btn--outline-sm" href="https://www.google.com/maps/search/Parque+Municipal+Halfeld+Juiz+de+Fora+MG" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Ver no mapa
+              </a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALERIA — ore carousel + lightbox
+         ============================================================ -->
+    <section id="galeria" class="galeria reveal-section" aria-labelledby="galeria-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="galeria-heading" class="section-header__title">Galeria de Minérios</h2>
+          <p class="section-header__body">
+            Conheça os minerais e rochas que fazem de Minas Gerais um tesouro geológico do Brasil.
+          </p>
+        </header>
+
+        <div
+          class="carousel"
+          aria-roledescription="carrossel"
+          aria-label="Galeria de minérios"
+        >
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="1 de 7: Quartzo">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Quartzo"
+                    data-name="Quartzo"
+                    data-type="Silicato"
+                    data-description="Um dos minerais mais abundantes da crosta terrestre. Em Minas Gerais, ocorre em diversas variedades: cristal de rocha, quartzo leitoso e quartzo fumê, muito usados em joalheria e na indústria."
+                    data-image="https://images.unsplash.com/photo-1560427450-00fa9481f01e?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Cristais de Quartzo transparente"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1560427450-00fa9481f01e?w=600&h=400&fit=crop&auto=format" alt="Cristais de Quartzo transparente" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Quartzo</span>
+                    <span class="ore-card__type">Silicato</span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="2 de 7: Ametista">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Ametista"
+                    data-name="Ametista"
+                    data-type="Quartzo Roxo"
+                    data-description="Variedade violeta do quartzo colorida por traços de ferro. Encontrada em geodos e veios hidrotermais, é muito valorizada em joalheria e colecionismo mineral em todo o mundo."
+                    data-image="https://images.unsplash.com/photo-1544274102-2fe4d95912f7?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Geodo de Ametista roxa"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1544274102-2fe4d95912f7?w=600&h=400&fit=crop&auto=format" alt="Geodo de Ametista roxa" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Ametista</span>
+                    <span class="ore-card__type">Quartzo Roxo</span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="3 de 7: Turmalina">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Turmalina"
+                    data-name="Turmalina"
+                    data-type="Ciclossilicato"
+                    data-description="Mineral de cores variadas e raridade excepcional. Minas Gerais é famosa internacionalmente pela qualidade de suas turmalinas paraíba, verdes e multicoloridas — gemas de altíssimo valor."
+                    data-image="https://images.unsplash.com/photo-1777559631813-5eb8a22d2082?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Cristais de Turmalina colorida"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1777559631813-5eb8a22d2082?w=600&h=400&fit=crop&auto=format" alt="Cristais de Turmalina colorida" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Turmalina</span>
+                    <span class="ore-card__type">Ciclossilicato</span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="4 de 7: Minério de Ferro">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Minério de Ferro"
+                    data-name="Minério de Ferro"
+                    data-type="Óxido"
+                    data-description="A hematita e a goethita formam o principal minério de ferro. O Quadrilátero Ferrífero é uma das maiores reservas do mundo, sendo fundamental para a economia brasileira e global."
+                    data-image="https://images.unsplash.com/photo-1695169152303-fdbd96a95cc2?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Amostra de Minério de Ferro hematita"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1695169152303-fdbd96a95cc2?w=600&h=400&fit=crop&auto=format" alt="Amostra de Minério de Ferro hematita" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Minério de Ferro</span>
+                    <span class="ore-card__type">Óxido</span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="5 de 7: Topázio Imperial">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Topázio Imperial"
+                    data-name="Topázio Imperial"
+                    data-type="Neossilicato"
+                    data-description="Pedra preciosa exclusiva de Ouro Preto, MG. O topázio imperial na cor laranja-avermelhada é único no mundo e símbolo do patrimônio geológico e cultural mineiro."
+                    data-image="https://images.unsplash.com/photo-1678244660394-fa02a19ac24a?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Cristal de Topázio Imperial laranja"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1678244660394-fa02a19ac24a?w=600&h=400&fit=crop&auto=format" alt="Cristal de Topázio Imperial laranja" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Topázio Imperial</span>
+                    <span class="ore-card__type">Neossilicato</span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="6 de 7: Esmeralda">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Esmeralda"
+                    data-name="Esmeralda"
+                    data-type="Berilo Verde"
+                    data-description="Pedra preciosa de valor inestimável. O Brasil é um dos maiores produtores mundiais, com importantes ocorrências em Nova Era e Itabira, MG, reconhecidas pela qualidade excepcional."
+                    data-image="https://images.unsplash.com/photo-1676721519521-cf9b7a17ae79?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Cristais de Esmeralda verde profundo"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1676721519521-cf9b7a17ae79?w=600&h=400&fit=crop&auto=format" alt="Cristais de Esmeralda verde profundo" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Esmeralda</span>
+                    <span class="ore-card__type">Berilo Verde</span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="7 de 7: Granito">
+                <article class="ore-card">
+                  <button
+                    class="ore-card__btn"
+                    aria-label="Ver detalhes sobre Granito"
+                    data-name="Granito"
+                    data-type="Rocha Ígnea"
+                    data-description="Rocha plutônica amplamente utilizada na construção civil e como pedra ornamental. Minas Gerais é um dos maiores produtores e exportadores de granito do Brasil."
+                    data-image="https://images.unsplash.com/photo-1676721603786-acf29e5a43a4?w=600&h=600&fit=crop&auto=format"
+                    data-image-alt="Superfície polida de granito cinza"
+                  >
+                    <img class="ore-card__image" src="https://images.unsplash.com/photo-1676721603786-acf29e5a43a4?w=600&h=400&fit=crop&auto=format" alt="Superfície polida de granito cinza" loading="lazy"/>
+                    <div class="ore-card__overlay" aria-hidden="true">
+                      <span class="ore-card__hint">Toque para saber mais</span>
+                    </div>
+                  </button>
+                  <div class="ore-card__caption">
+                    <span class="ore-card__name">Granito</span>
+                    <span class="ore-card__type">Rocha Ígnea</span>
+                  </div>
+                </article>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Nav arrows -->
+          <button class="carousel__btn carousel__btn--prev" aria-label="Minério anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="carousel__btn carousel__btn--next" aria-label="Próximo minério">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M9 18l6-6-6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <!-- Dot pagination -->
+          <ul class="carousel__dots" role="tablist" aria-label="Slides do carrossel">
+            <li role="presentation"><button class="carousel__dot carousel__dot--active" role="tab" aria-label="Ir para slide 1"></button></li>
+            <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 2"></button></li>
+            <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 3"></button></li>
+            <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 4"></button></li>
+            <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 5"></button></li>
+            <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 6"></button></li>
+            <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 7"></button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Detalhes do minério" hidden>
+      <div class="lightbox__overlay" aria-hidden="true"></div>
+      <div class="lightbox__content">
+        <img class="lightbox__image" src="" alt="" />
+        <div class="lightbox__info">
+          <h2 class="lightbox__name"></h2>
+          <span class="lightbox__type"></span>
+          <p class="lightbox__description"></p>
+        </div>
+      </div>
+      <button class="lightbox__close" aria-label="Fechar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- ============================================================
+         CURIOSIDADES — flip cards
+         ============================================================ -->
+    <section id="curiosidades" class="curiosidades reveal-section" aria-labelledby="curiosidades-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="curiosidades-heading" class="section-header__title">Curiosidades</h2>
+          <p class="section-header__body">
+            Toque em cada card para revelar um fato surpreendente sobre a mineração em Minas Gerais.
+          </p>
+        </header>
+
+        <div class="flip-grid" aria-label="Cards de curiosidades">
+
+          <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Curiosidade: Maior exportador">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <span class="flip-card__icon" aria-hidden="true">⛏️</span>
+                <h3 class="flip-card__title">Maior Exportador</h3>
+                <span class="flip-card__hint">Toque para revelar</span>
+              </div>
+              <div class="flip-card__back">
+                <p class="flip-card__fact">Minas Gerais responde por mais de 70% das exportações brasileiras de minério de ferro, contribuindo decisivamente para o superávit comercial do país.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Curiosidade: Ouro Preto">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <span class="flip-card__icon" aria-hidden="true">🏛️</span>
+                <h3 class="flip-card__title">Ouro Preto</h3>
+                <span class="flip-card__hint">Toque para revelar</span>
+              </div>
+              <div class="flip-card__back">
+                <p class="flip-card__fact">No século XVIII, Ouro Preto produzia mais da metade de todo o ouro do mundo ocidental, financiando o barroco mineiro e a coroa portuguesa.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Curiosidade: Gemas raras">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <span class="flip-card__icon" aria-hidden="true">💎</span>
+                <h3 class="flip-card__title">Gemas Raras</h3>
+                <span class="flip-card__hint">Toque para revelar</span>
+              </div>
+              <div class="flip-card__back">
+                <p class="flip-card__fact">O Topázio Imperial só existe em Ouro Preto — é a única gema exclusiva de uma única localidade no mundo, conferindo ao município um estatuto geológico único.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Curiosidade: Quadrilátero Ferrífero">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <span class="flip-card__icon" aria-hidden="true">🌎</span>
+                <h3 class="flip-card__title">Quadrilátero Ferrífero</h3>
+                <span class="flip-card__hint">Toque para revelar</span>
+              </div>
+              <div class="flip-card__back">
+                <p class="flip-card__fact">Esta região concentra reservas de mais de 25 bilhões de toneladas de minério de ferro de alta qualidade, sendo uma das maiores reservas conhecidas do planeta.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Curiosidade: Turmalina Paraíba">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <span class="flip-card__icon" aria-hidden="true">🔵</span>
+                <h3 class="flip-card__title">Turmalina Paraíba</h3>
+                <span class="flip-card__hint">Toque para revelar</span>
+              </div>
+              <div class="flip-card__back">
+                <p class="flip-card__fact">A Turmalina Paraíba azul-neônio pode valer mais de US$ 50.000 por quilate — mais que diamantes de mesma qualidade — devido à sua rara fluorescência causada pelo cobre.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" tabindex="0" role="button" aria-pressed="false" aria-label="Curiosidade: Mineração e PIB">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <span class="flip-card__icon" aria-hidden="true">📊</span>
+                <h3 class="flip-card__title">Mineração e PIB</h3>
+                <span class="flip-card__hint">Toque para revelar</span>
+              </div>
+              <div class="flip-card__back">
+                <p class="flip-card__fact">A mineração representa cerca de 5% do PIB de Minas Gerais e gera mais de 120 mil empregos diretos, tornando o setor o segundo maior da economia estadual.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTATO / ESCOLARES — booking form
+         ============================================================ -->
+    <section id="contato" class="contato reveal-section" aria-labelledby="contato-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contato-heading" class="section-header__title">Agende sua Escola</h2>
+          <p class="section-header__body">
+            Professores e coordenadores podem solicitar uma visita guiada com atividades pedagógicas exclusivas para turmas de ensino fundamental e médio.
+          </p>
+        </header>
+
+        <form id="booking-form" class="booking-form" novalidate aria-label="Formulário de agendamento escolar">
+
+          <div class="form-field">
+            <label class="form-field__label" for="name">Nome completo</label>
+            <input
+              id="name"
+              class="form-field__input"
+              type="text"
+              placeholder="Maria Aparecida Costa"
+              autocomplete="name"
+              required
+            />
+            <span id="name-error" class="form-field__error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="school">Escola / Instituição</label>
+            <input
+              id="school"
+              class="form-field__input"
+              type="text"
+              placeholder="Escola Estadual João Pinheiro"
+              autocomplete="organization"
+              required
+            />
+            <span id="school-error" class="form-field__error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-field__label" for="email">E-mail</label>
+              <input
+                id="email"
+                class="form-field__input"
+                type="email"
+                placeholder="maria@escola.mg.gov.br"
+                autocomplete="email"
+                required
+              />
+              <span id="email-error" class="form-field__error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="phone">Telefone</label>
+              <input
+                id="phone"
+                class="form-field__input"
+                type="tel"
+                placeholder="(31) 98765-4321"
+                autocomplete="tel"
+                required
+              />
+              <span id="phone-error" class="form-field__error" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="message">Mensagem / Observações</label>
+            <textarea
+              id="message"
+              class="form-field__input form-field__input--textarea"
+              rows="4"
+              placeholder="Informe o número de alunos, série, data preferida e qualquer necessidade especial..."
+              required
+            ></textarea>
+            <span id="message-error" class="form-field__error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full btn--submit">
+            <svg class="btn__spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="9" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+              <path d="M12 3a9 9 0 0 1 9 9" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="btn__label">Enviar solicitação</span>
+          </button>
+        </form>
+
+        <aside class="contact-info" aria-label="Outros canais de contato">
+          <p class="contact-info__title">Outros canais de contato</p>
+          <ul class="contact-info__list">
+            <li class="contact-info__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#557571" stroke-width="1.8"/><polyline points="22,6 12,13 2,6" stroke="#557571" stroke-width="1.8"/></svg>
+              <span>minasdaminas@fiemg.com.br</span>
+            </li>
+            <li class="contact-info__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.07 2.82 2 2 0 012 .64h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="#557571" stroke-width="1.8"/></svg>
+              <span>(31) 3263-4100</span>
+            </li>
+            <li class="contact-info__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#557571" opacity="0.6"/></svg>
+              <span>Av. do Contorno, 4520 — Funcionários, Belo Horizonte — MG</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="site-footer__grid">
+
+        <div class="site-footer__brand">
+          <div class="site-footer__logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+              <circle cx="16" cy="16" r="15" fill="rgba(255,255,255,0.15)"/>
+              <path d="M8 22L16 10L24 22H8Z" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="16" cy="14" r="3" fill="#C4C09A"/>
+            </svg>
+            Minas das Minas
+          </div>
+          <p class="site-footer__tagline">
+            Uma exposição itinerante SENAI para aproximar comunidades, escolas e estudantes do patrimônio geológico de Minas Gerais.
+          </p>
+          <ul class="social-links" aria-label="Redes sociais">
+            <li>
+              <a class="social-links__item" href="https://instagram.com/senaimg" target="_blank" rel="noopener noreferrer" aria-label="Instagram do SENAI MG">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/>
+                  <circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.8"/>
+                  <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-links__item" href="https://facebook.com/senaimg" target="_blank" rel="noopener noreferrer" aria-label="Facebook do SENAI MG">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-links__item" href="https://youtube.com/senaimg" target="_blank" rel="noopener noreferrer" aria-label="YouTube do SENAI MG">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" stroke="white" stroke-width="1.8"/>
+                  <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links rápidos">
+          <h2 class="footer-nav__title">Links Rápidos</h2>
+          <ul class="footer-nav__list">
+            <li><a class="footer-nav__link" href="#exposicao">Exposição</a></li>
+            <li><a class="footer-nav__link" href="#agenda">Agenda</a></li>
+            <li><a class="footer-nav__link" href="#cidades">Cidades</a></li>
+            <li><a class="footer-nav__link" href="#galeria">Galeria</a></li>
+            <li><a class="footer-nav__link" href="#curiosidades">Curiosidades</a></li>
+            <li><a class="footer-nav__link" href="#contato">Agendar Visita</a></li>
+          </ul>
+        </nav>
+
+        <address class="footer-contact">
+          <h2 class="footer-contact__title">Contato</h2>
+          <ul class="footer-contact__list">
+            <li>minasdaminas@fiemg.com.br</li>
+            <li>(31) 3263-4100</li>
+            <li>Av. do Contorno, 4520<br/>Funcionários, Belo Horizonte — MG<br/>CEP 30110-090</li>
+          </ul>
+        </address>
+
+      </div>
+
+      <p class="site-footer__bottom">
+        &copy; <span id="footer-year"></span> Minas das Minas &middot; Realização SENAI Minas Gerais
+      </p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+    <svg class="toast__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.25)"/>
+      <path d="M7 12l4 4 6-7" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Mensagem enviada com sucesso!
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
