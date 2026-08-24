@@ -39,10 +39,10 @@
     </div>
   </header>
 
-  <!-- Mobile nav overlay -->
+  <!-- Sobreposição da navegação mobile -->
   <div class="mobile-nav-overlay" aria-hidden="true"></div>
 
-  <!-- Mobile nav panel -->
+  <!-- Painel da navegação mobile -->
   <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação mobile">
     <button class="mobile-nav__close btn" aria-label="Fechar menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -62,7 +62,7 @@
 
   <main id="main-content">
 
-    <!-- HERO -->
+    <!-- DESTAQUE -->
     <section id="inicio" class="hero" aria-label="Apresentação da exposição">
       <img
         class="hero__bg-image"
@@ -92,7 +92,7 @@
     </section>
 
     <!-- ============================================================
-         EXPOSIÇÃO — floor plan
+         EXPOSIÇÃO — planta baixa
          ============================================================ -->
     <section id="exposicao" class="exposicao reveal-section" aria-labelledby="exposicao-heading">
       <div class="container">
@@ -106,7 +106,7 @@
 
         <div class="floor-plan">
           <div class="floor-plan__container">
-            <!-- SVG Floor Plan -->
+            <!-- Planta baixa em SVG -->
             <svg
               class="floor-plan__svg"
               viewBox="0 0 800 240"
@@ -114,54 +114,54 @@
               role="img"
               aria-label="Planta baixa da carreta de exposição com 5 zonas marcadas"
             >
-              <!-- Trailer body -->
+              <!-- Estrutura da carreta -->
               <rect x="20" y="30" width="760" height="180" rx="12" ry="12" fill="#C4C09A" stroke="#557571" stroke-width="2.5"/>
 
-              <!-- Zone dividers -->
+              <!-- Divisórias das zonas -->
               <line x1="170" y1="30" x2="170" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
               <line x1="330" y1="30" x2="330" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
               <line x1="490" y1="30" x2="490" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
               <line x1="650" y1="30" x2="650" y2="210" stroke="#557571" stroke-width="1.5" stroke-dasharray="6 4"/>
 
-              <!-- Zone fills -->
+              <!-- Preenchimento das zonas -->
               <rect x="21" y="31" width="148" height="178" rx="10" fill="rgba(85,117,113,0.08)"/>
               <rect x="491" y="31" width="158" height="178" fill="rgba(85,117,113,0.08)"/>
 
-              <!-- Zone labels -->
+              <!-- Rótulos das zonas -->
               <text x="95"  y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Entrada</text>
               <text x="250" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Minerais</text>
               <text x="410" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Interativo</text>
               <text x="570" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Linha do Tempo</text>
               <text x="725" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#557571" opacity="0.7">Audiovisual</text>
 
-              <!-- Windows top -->
+              <!-- Janelas superiores -->
               <rect x="185" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
               <rect x="345" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
               <rect x="505" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
               <rect x="665" y="22" width="40" height="12" rx="4" fill="#557571" opacity="0.3"/>
 
-              <!-- Wheels -->
+              <!-- Rodas -->
               <ellipse cx="160" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
               <ellipse cx="230" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
               <ellipse cx="570" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
               <ellipse cx="640" cy="218" rx="22" ry="14" fill="#557571" opacity="0.55"/>
 
-              <!-- Hitch -->
+              <!-- Engate -->
               <rect x="770" y="108" width="18" height="24" rx="4" fill="#557571" opacity="0.6"/>
 
-              <!-- SENAI badge -->
+              <!-- Identificação da exposição -->
               <rect x="36" y="50" width="108" height="30" rx="6" fill="#557571"/>
               <text x="90" y="70" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="13" fill="white">Minas das Minas</text>
             </svg>
 
-            <!-- Hotspot buttons — positions defined in CSS via .hotspot--N classes -->
+            <!-- Botões de destaque — posições definidas no CSS pelas classes .hotspot--N -->
             <button class="hotspot hotspot--1" data-hotspot="1" aria-label="Zona 1: Entrada e Recepção" aria-expanded="false">+</button>
             <button class="hotspot hotspot--2" data-hotspot="2" aria-label="Zona 2: Sala de Minerais" aria-expanded="false">+</button>
             <button class="hotspot hotspot--3" data-hotspot="3" aria-label="Zona 3: Ambiente Interativo" aria-expanded="false">+</button>
             <button class="hotspot hotspot--4" data-hotspot="4" aria-label="Zona 4: Linha do Tempo" aria-expanded="false">+</button>
             <button class="hotspot hotspot--5" data-hotspot="5" aria-label="Zona 5: Área Audiovisual" aria-expanded="false">+</button>
 
-            <!-- Shared tooltip — positioned dynamically by JS -->
+            <!-- Dica compartilhada — posicionada dinamicamente pelo JavaScript -->
             <div id="hotspot-tooltip" class="hotspot__tooltip" role="tooltip" hidden>
               <button class="hotspot__tooltip-close" aria-label="Fechar informação">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -177,9 +177,9 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         AGENDA — schedule
-         ============================================================ -->
+        <!-- ============================================================
+          AGENDA — programação
+          ============================================================ -->
     <section id="agenda" class="agenda reveal-section" aria-labelledby="agenda-heading">
       <div class="container">
         <header class="section-header">
@@ -317,7 +317,7 @@
     </section>
 
     <!-- ============================================================
-         CIDADES — city search + accordion
+         CIDADES — busca de cidades + acordeão
          ============================================================ -->
     <section id="cidades" class="cidades reveal-section" aria-labelledby="cidades-heading">
       <div class="container">
@@ -328,7 +328,7 @@
           </p>
         </header>
 
-        <!-- Search -->
+        <!-- Busca -->
         <div class="city-search">
           <label for="city-search" class="visually-hidden">Buscar cidade</label>
           <svg class="city-search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -345,7 +345,7 @@
           />
         </div>
 
-        <!-- Empty state -->
+        <!-- Estado vazio -->
         <div id="cities-empty" class="empty-state" hidden aria-live="polite">
           <svg class="empty-state__icon" width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
             <circle cx="11" cy="11" r="8" stroke="#557571" stroke-width="1.5" opacity="0.4"/>
@@ -356,7 +356,7 @@
           <p class="empty-state__body">Tente outro nome ou verifique a agenda completa acima.</p>
         </div>
 
-        <!-- Accordion -->
+        <!-- Acordeão -->
         <ul id="cities-accordion" class="accordion" aria-label="Cidades da exposição">
 
           <li class="accordion__item" data-city="Belo Horizonte">
@@ -564,7 +564,7 @@
     </section>
 
     <!-- ============================================================
-         GALERIA — ore carousel + lightbox
+         GALERIA — carrossel de minérios + lightbox
          ============================================================ -->
     <section id="galeria" class="galeria reveal-section" aria-labelledby="galeria-heading">
       <div class="container">
@@ -747,7 +747,7 @@
             </ul>
           </div>
 
-          <!-- Nav arrows -->
+          <!-- Setas de navegação -->
           <button class="carousel__btn carousel__btn--prev" aria-label="Minério anterior">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
               <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -759,7 +759,7 @@
             </svg>
           </button>
 
-          <!-- Dot pagination -->
+          <!-- Paginação por pontos -->
           <ul class="carousel__dots" role="tablist" aria-label="Slides do carrossel">
             <li role="presentation"><button class="carousel__dot carousel__dot--active" role="tab" aria-label="Ir para slide 1"></button></li>
             <li role="presentation"><button class="carousel__dot" role="tab" aria-label="Ir para slide 2"></button></li>
@@ -773,7 +773,7 @@
       </div>
     </section>
 
-    <!-- Lightbox modal -->
+    <!-- Modal de detalhes -->
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Detalhes do minério" hidden>
       <div class="lightbox__overlay" aria-hidden="true"></div>
       <div class="lightbox__content">
@@ -792,7 +792,7 @@
     </div>
 
     <!-- ============================================================
-         CURIOSIDADES — flip cards
+         CURIOSIDADES — cards interativos
          ============================================================ -->
     <section id="curiosidades" class="curiosidades reveal-section" aria-labelledby="curiosidades-heading">
       <div class="container">
@@ -888,7 +888,7 @@
     </section>
 
     <!-- ============================================================
-         CONTATO / ESCOLARES — booking form
+         CONTATO / ESCOLAS — formulário de agendamento
          ============================================================ -->
     <section id="contato" class="contato reveal-section" aria-labelledby="contato-heading">
       <div class="container">
@@ -999,7 +999,7 @@
   </main>
 
   <!-- ============================================================
-       FOOTER
+      RODAPÉ
        ============================================================ -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -1074,7 +1074,7 @@
     </div>
   </footer>
 
-  <!-- Toast notification -->
+  <!-- Notificação toast -->
   <div id="toast" class="toast" role="status" aria-live="polite" hidden>
     <svg class="toast__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
       <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,0.25)"/>

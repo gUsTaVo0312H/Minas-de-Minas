@@ -1,8 +1,8 @@
-/*  GOOGLE FONTS — must be first */
+/*  GOOGLE FONTS — deve ser o primeiro */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 /* ============================================================
-   1. CSS RESET / BASE
+  1. REDEFINIÇÃO / BASE DO CSS
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -21,7 +21,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 input, textarea { font-family: inherit; font-size: inherit; color: inherit; }
 textarea { resize: vertical; }
 
-/*2. CSS CUSTOM PROPERTIES */
+/*2. PROPRIEDADES PERSONALIZADAS DO CSS */
 :root {
   --color-bg:        #D6DDD8;
   --color-secondary: #C4C09A;
@@ -55,7 +55,7 @@ textarea { resize: vertical; }
 }
 
 /* ============================================================
-   3. TYPOGRAPHY
+  3. TIPOGRAFIA
    ============================================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
@@ -75,7 +75,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   4. LAYOUT / GRID UTILITIES
+  4. LAYOUT / UTILITÁRIOS DE GRADE
    ============================================================ */
 .container {
   width: 100%;
@@ -98,7 +98,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   5. HEADER & NAVIGATION
+  5. CABEÇALHO E NAVEGAÇÃO
    ============================================================ */
 .site-header {
   position: sticky; top: 0; z-index: 50;
@@ -212,7 +212,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 .btn--full { width: 100%; }
 
-/* Submit button spinner states */
+/* Estados do indicador de carregamento do botão de envio */
 .btn__spinner { display: none; }
 .btn--loading .btn__label  { display: none; }
 .btn--loading .btn__spinner { display: block; animation: spin 0.8s linear infinite; }
@@ -228,7 +228,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   8a. SECTION — Hero
+  8a. SEÇÃO — Destaque
    ============================================================ */
 .hero {
   position: relative; min-height: 80vh;
@@ -277,7 +277,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   8b. SECTION — Exposição / Floor Plan
+  8b. SEÇÃO — Exposição / Planta baixa
    ============================================================ */
 .floor-plan { margin-top: var(--space-lg); }
 .floor-plan__container {
@@ -337,7 +337,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   8c. SECTION — Agenda
+  8c. SEÇÃO — Agenda
    ============================================================ */
 .agenda__list { display: flex; flex-direction: column; gap: var(--space-xs); }
 .agenda__item {
@@ -365,7 +365,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   8d. SECTION — Cidades
+  8d. SEÇÃO — Cidades
    ============================================================ */
 .city-search { position: relative; margin-bottom: var(--space-md); }
 .city-search__icon {
@@ -387,7 +387,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 .empty-state__body { font-size: 15px; color: var(--color-text); }
 
 /* ============================================================
-   8e. SECTION — Galeria
+  8e. SEÇÃO — Galeria
    ============================================================ */
 .ore-card {
   background-color: var(--color-secondary); border-radius: var(--radius-lg);
@@ -434,12 +434,12 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   8f. SECTION — Curiosidades
+  8f. SEÇÃO — Curiosidades
    ============================================================ */
 .flip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 
 /* ============================================================
-   8g. SECTION — Contato
+  8g. SEÇÃO — Contato
    ============================================================ */
 .booking-form {
   max-width: 520px; margin-inline: auto;
@@ -481,7 +481,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   8h. SECTION — Footer
+  8h. SEÇÃO — Rodapé
    ============================================================ */
 .site-footer { background-color: var(--color-accent); color: var(--color-white); }
 .site-footer .container { padding-block: 56px var(--space-lg); }
@@ -528,7 +528,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   9a. COMPONENT — Accordion
+  9a. COMPONENTE — Acordeão
    ============================================================ */
 .accordion { display: flex; flex-direction: column; gap: 10px; }
 .accordion__item--hidden { display: none; }
@@ -568,7 +568,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   9b. COMPONENT — Carousel
+  9b. COMPONENTE — Carrossel
    ============================================================ */
 .carousel { position: relative; }
 .carousel__viewport { overflow: hidden; border-radius: var(--radius-lg); }
@@ -599,7 +599,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 .carousel__dot--active { width: 24px; background-color: var(--color-accent); }
 
 /* ============================================================
-   9c. COMPONENT — Lightbox
+  9c. COMPONENTE — Visualização ampliada
    ============================================================ */
 .lightbox {
   position: fixed; inset: 0; z-index: 200;
@@ -637,7 +637,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   9d. COMPONENT — Toast
+  9d. COMPONENTE — Notificação toast
    ============================================================ */
 .toast {
   position: fixed; top: 80px; left: 50%; transform: translateX(-50%);
@@ -651,7 +651,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 .toast[hidden] { display: none; }
 
 /* ============================================================
-   9e. COMPONENT — Flip Cards
+  9e. COMPONENTE — Cards interativos
    ============================================================ */
 .flip-card {
   height: 200px; cursor: pointer; perspective: 1000px; outline: none;
@@ -686,7 +686,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   9f. COMPONENT — Scroll reveal
+  9f. COMPONENTE — Revelação ao rolar
    ============================================================ */
 .reveal-section {
   opacity: 0; transform: translateY(24px);
@@ -695,7 +695,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 .reveal-section--visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================================
-   GLOBAL FOCUS
+  FOCO GLOBAL
    ============================================================ */
 :focus-visible {
   outline: 3px solid var(--color-accent);
@@ -703,7 +703,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   10. KEYFRAMES & ANIMATIONS
+  10. QUADROS-CHAVE E ANIMAÇÕES
    ============================================================ */
 @keyframes pulseChevron {
   0%, 100% { opacity: 1; }
@@ -722,7 +722,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   10. MEDIA QUERIES — tablet 768px
+  10. CONSULTAS DE MÍDIA — tablet 768px
    ============================================================ */
 @media (min-width: 768px) {
   .hero, .exposicao, .agenda, .cidades, .galeria, .curiosidades, .contato {
@@ -742,7 +742,7 @@ p  { font-family: var(--font-body); font-size: 16px; line-height: 1.7; }
 }
 
 /* ============================================================
-   10. MEDIA QUERIES — desktop 1200px
+  10. CONSULTAS DE MÍDIA — desktop 1200px
    ============================================================ */
 @media (min-width: 1200px) {
   .container { padding-inline: var(--space-lg); }

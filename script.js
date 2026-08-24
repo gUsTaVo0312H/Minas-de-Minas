@@ -1,22 +1,22 @@
 /**
- * script.js — Minas das Minas landing page interactive behaviour
+ * script.js — comportamento interativo da página Minas das Minas
  *
- * Sections:
- *   1. Sticky header glassmorphism
- *   2. Hamburger menu (Escape + overlay close)
- *   3. IntersectionObserver scroll reveals
- *   4. Floor-plan hotspot tooltips
- *   5. City search filter + empty state
- *   6. Accordion (independent mode)
- *   7. Carousel + lightbox (focus trap, Escape key)
- *   8. Flip cards (click + keyboard)
- *   9. Booking form (validation, phone mask, fake async submit, toast)
+ * Seções:
+ *   1. Cabeçalho fixo com glassmorphism
+ *   2. Menu hambúrguer (Escape + fechamento pela sobreposição)
+ *   3. Revelações ao rolar com IntersectionObserver
+ *   4. Dicas dos pontos da planta baixa
+ *   5. Filtro de busca de cidades + estado vazio
+ *   6. Acordeão (modo independente)
+ *   7. Carrossel + lightbox (contenção de foco, tecla Escape)
+ *   8. Cards interativos (clique + teclado)
+ *   9. Formulário de agendamento (validação, máscara de telefone, envio assíncrono simulado, toast)
  */
 
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ============================================================
-     1. STICKY HEADER — glassmorphism on scroll
+    1. CABEÇALHO FIXO — glassmorphism ao rolar
      ============================================================ */
   const header = document.querySelector(".site-header");
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     2. HAMBURGER MENU
+    2. MENU HAMBÚRGUER
      ============================================================ */
   const hamburger    = document.querySelector(".hamburger");
   const mobileNav    = document.querySelector(".mobile-nav");
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     3. INTERSECTION OBSERVER — scroll reveals
+    3. INTERSECTION OBSERVER — revelações ao rolar
      ============================================================ */
   const revealTargets = document.querySelectorAll(".reveal-section");
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     4. FLOOR-PLAN HOTSPOT TOOLTIPS
+    4. DICAS DOS PONTOS DA PLANTA BAIXA
      ============================================================ */
   const hotspotData = {
     "1": {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const relLeft   = bRect.left - cRect.left;
     const relTop    = bRect.top  - cRect.top;
 
-    // Position tooltip left or right of hotspot depending on available space
+    // Posiciona a dica à esquerda ou à direita conforme o espaço disponível
     const tipWidth  = 240;
     if (relLeft > cRect.width / 2) {
       tooltip.style.right = (cRect.width - relLeft + 8) + "px";
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       tooltip.style.left  = (relLeft + bRect.width / 2 + 8) + "px";
       tooltip.style.right = "auto";
     }
-    // Clamp vertically so tooltip doesn't go above container
+    // Limita a posição vertical para a dica não sair do contêiner
     tooltip.style.top = Math.max(4, relTop - 12) + "px";
   }
 
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tooltipTitle.textContent = data.title;
     tooltipDesc.textContent  = data.desc;
 
-    // Remove hidden so it has dimensions; position it; then reveal
+    // Remove hidden para obter as dimensões, posiciona e revela a dica
     tooltip.removeAttribute("hidden");
     positionTooltip(btn);
 
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   tooltipClose && tooltipClose.addEventListener("click", hideTooltip);
 
-  // Close tooltip when pressing Escape or clicking outside
+  // Fecha a dica ao pressionar Escape ou clicar fora
   document.addEventListener("keydown", e => {
     if (e.key === "Escape" && activeHotspot) hideTooltip();
   });
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     5. CITY SEARCH FILTER + EMPTY STATE
+    5. FILTRO DE BUSCA DE CIDADES + ESTADO VAZIO
      ============================================================ */
   const cityInput  = document.getElementById("city-search");
   const accordionItems = document.querySelectorAll(".accordion__item");
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (match) visible++;
       });
 
-      // Show or hide empty state
+      // Exibe ou oculta o estado vazio
       if (emptyState) {
         if (visible === 0) {
           emptyState.removeAttribute("hidden");
@@ -223,9 +223,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     6. ACCORDION — independent (only one open at a time)
-     Note: panels do NOT use the `hidden` attribute — CSS max-height
-     handles collapse so transitions are not blocked.
+    6. ACORDEÃO — independente (apenas um aberto por vez)
+    Observação: os painéis NÃO usam o atributo `hidden` — o max-height
+    do CSS controla o recolhimento para que as transições não sejam bloqueadas.
      ============================================================ */
   const accordionTriggers = document.querySelectorAll(".accordion__trigger");
 
@@ -234,14 +234,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const parentItem = trigger.closest(".accordion__item");
       const isOpen     = parentItem.classList.contains("accordion__item--open");
 
-      // Close all others
+      // Fecha todos os outros
       accordionItems.forEach(item => {
         item.classList.remove("accordion__item--open");
         const t = item.querySelector(".accordion__trigger");
         t && t.setAttribute("aria-expanded", "false");
       });
 
-      // Toggle the clicked item
+      // Alterna o item clicado
       if (!isOpen) {
         parentItem.classList.add("accordion__item--open");
         trigger.setAttribute("aria-expanded", "true");
@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     7. CAROUSEL + LIGHTBOX
+    7. CARROSSEL + LIGHTBOX
      ============================================================ */
   const track     = document.querySelector(".carousel__track");
   const slides    = track ? Array.from(track.querySelectorAll(".carousel__slide")) : [];
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalSlides = slides.length;
 
   function goToSlide(index) {
-    currentSlide = (index + totalSlides) % totalSlides; // looping modulo
+    currentSlide = (index + totalSlides) % totalSlides; // módulo circular
     track.style.transform = `translateX(-${currentSlide * 100}%)`;
 
     dots.forEach((dot, i) => {
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener("click", () => goToSlide(i));
   });
 
-  // Touch swipe support
+  // Suporte ao gesto de deslizar por toque
   let touchStartX = 0;
 
   track && track.addEventListener("touchstart", e => {
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (delta < -50) goToSlide(currentSlide - 1);
   }, { passive: true });
 
-  // Initialize
+  // Inicialização
   if (totalSlides > 0) goToSlide(0);
 
   /* --- Lightbox --- */
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lbOverlay      = lightbox && lightbox.querySelector(".lightbox__overlay");
   const oreCardBtns    = document.querySelectorAll(".ore-card__btn");
 
-  // Collect focusable elements for focus trap
+  // Reúne elementos focáveis para a contenção de foco
   function getFocusable(container) {
     return Array.from(
       container.querySelectorAll(
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lbClose  && lbClose.addEventListener("click", closeLightbox);
   lbOverlay && lbOverlay.addEventListener("click", closeLightbox);
 
-  // Focus trap + Escape for lightbox
+  // Contenção de foco + Escape para o lightbox
   lightbox && lightbox.addEventListener("keydown", e => {
     if (e.key === "Escape") {
       closeLightbox();
@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     8. FLIP CARDS — click + keyboard (Enter / Space)
+    8. CARDS INTERATIVOS — clique + teclado (Enter / Espaço)
      ============================================================ */
   const flipCards = document.querySelectorAll(".flip-card");
 
@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================================================
-     9. BOOKING FORM — validation, phone mask, fake async submit, toast
+    9. FORMULÁRIO DE AGENDAMENTO — validação, máscara de telefone, envio assíncrono simulado, toast
      ============================================================ */
   const form        = document.getElementById("booking-form");
   const toast       = document.getElementById("toast");
@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitLabel = submitBtn && submitBtn.querySelector(".btn__label");
   const submitSpin  = submitBtn && submitBtn.querySelector(".btn__spinner");
 
-  // Phone mask: formats as (XX) XXXXX-XXXX
+  // Máscara de telefone: formata como (XX) XXXXX-XXXX
   const phoneInput = form && form.querySelector("#phone");
 
   phoneInput && phoneInput.addEventListener("input", () => {
@@ -423,7 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
     phoneInput.value = masked;
   });
 
-  // Show / clear individual field error
+  // Exibe / limpa o erro de um campo
   function setFieldError(fieldId, message) {
     const field = form.querySelector(`#${fieldId}`);
     const error = form.querySelector(`#${fieldId}-error`);
@@ -438,7 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Clear errors on input
+  // Limpa os erros ao digitar
   form && form.querySelectorAll(".form-field__input").forEach(input => {
     input.addEventListener("input", () => {
       setFieldError(input.id, "");
@@ -485,7 +485,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showToast() {
     if (!toast) return;
     toast.removeAttribute("hidden");
-    // Auto-dismiss after 3.5 s
+    // Fecha automaticamente após 3,5 s
     setTimeout(() => {
       toast.setAttribute("hidden", "");
     }, 3500);
@@ -501,52 +501,52 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    // Loading state
+    // Estado de carregamento
     submitBtn.disabled = true;
     submitBtn.classList.add("btn--loading");
 
     /*
-     * TODO: replace the setTimeout below with a real fetch() call:
+    * TODO: substituir o setTimeout abaixo por uma chamada fetch() real:
      *
      *   const response = await fetch("/api/booking", {
      *     method: "POST",
      *     headers: { "Content-Type": "application/json" },
      *     body: JSON.stringify({ name, school, email, phone, message }),
      *   });
-     *   if (!response.ok) throw new Error("Server error");
+    *   if (!response.ok) throw new Error("Erro no servidor");
      */
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    // Success state
+    // Estado de sucesso
     submitBtn.classList.remove("btn--loading");
     submitBtn.classList.add("btn--success");
 
-    // Reset form fields
+    // Limpa os campos do formulário
     form.reset();
 
-    // Show toast
+    // Exibe a notificação toast
     showToast();
 
-    // Return button to idle after 2.5 s
+    // Retorna o botão ao estado inicial após 2,5 s
     setTimeout(resetSubmitBtn, 2500);
   });
 
 
   /* ============================================================
-     FOOTER — dynamic year
+    RODAPÉ — ano dinâmico
      ============================================================ */
   const yearEl = document.getElementById("footer-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 
   /* ============================================================
-     HERO — fade in background image + content on load
+    DESTAQUE — entrada gradual da imagem de fundo e do conteúdo ao carregar
      ============================================================ */
   const heroBg      = document.querySelector(".hero__bg-image");
   const heroContent = document.querySelector(".hero__content");
 
   if (heroBg) {
-    // If already cached/loaded fire immediately, otherwise wait for load event
+    // Se já estiver em cache, executa imediatamente; caso contrário, aguarda o carregamento
     const revealHero = () => {
       heroBg.classList.add("hero__bg-image--loaded");
       setTimeout(() => {
@@ -558,11 +558,11 @@ document.addEventListener("DOMContentLoaded", () => {
       revealHero();
     } else {
       heroBg.addEventListener("load", revealHero);
-      // Fallback if image fails — still reveal content
+      // Alternativa caso a imagem falhe — ainda revela o conteúdo
       heroBg.addEventListener("error", () => {
         heroContent && heroContent.classList.add("hero__content--visible");
       });
     }
   }
 
-}); // end DOMContentLoaded
+}); // fim do DOMContentLoaded
