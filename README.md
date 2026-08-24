@@ -14,7 +14,7 @@
 <br>
 
 <p align="center">
-<img alt="projeto Minas das Minas" src="preview.png" width="100%">
+<img alt="projeto Minas das Minas" src=".github/preview.png" width="100%">
  </p>
 
 ## 🚀 Tecnologias
